@@ -1,0 +1,356 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="css/bootstrap/3.3.1/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="css/theme.css" type="text/css" rel="stylesheet">
+<link href="css/nomination.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap/3.3.1/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<title> Introduction</title>
+</head><body><div class="container">
+<div ng-app="myApp">
+    <h1 class="logo text-center">Nomination page</h1><br>
+
+    <p>Dear evaluee,<br><br>
+        before starting with your self-evaluation, you have the option to define who should give feedback to you.
+        Enter name, email address and role of the people from who you wish to get feedback from to the table below.
+        The "role" of a person defines the relationship the person has towards you.<br>
+
+        <br><br>In your feedback report you will see the results by role.
+        Please take into consideration that there need to be answers of at least
+        3 colleagues, 3 subordinates, 3 customers and 3 others to be shown separately in the report.
+        If there are answers from less than 3 respondents from these roles, the results will only be shown in the group "all". <br><br>
+
+Already nominated respondents (if any) are listed above the table.
+</p>
+
+    <h2 class="logo text-left">Your respondents:</h2><br>
+    <div class="col-xs-12">
+		<div class="panel-group" id="accordion">
+				<!--New person -->
+				<div class="panel panel-default" ng-controller="myCtrl1">
+					<div class="panel-heading clearfix">
+						<h4 class="panel-title pull-left">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">{{fname}} {{lname}}</a>
+						</h4>
+						<div class="pull-right">
+						<button href='#remove' class="btn btn-link btn-xs btn-remove-panel" onclick="removeThis(this)">x</button>
+						</div>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="col-lg-7 text-center nomination-list">
+									<div class="clearfix"></div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">First name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" ng-model="fname" placehold="New">
+											</div>
+									  </div>
+									  <div class="clearfix"></div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Last name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" ng-model="lname" placehold="User">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Company:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Example Inc." value="">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Email:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="example@test.org">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Role:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="role" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="Superior">Superior</option>
+												  <option value="Colleague">Colleague</option>
+												  <option value="Subordinate">Subordinate</option>
+												  <option value="Customer">Customer</option>
+												  <option value="Other">Other</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+										<div class="row form-group">
+											<label class="col-xs-5 control-label">Language:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="language" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="English">English</option>
+												  <option value="Suomi">Suomi</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Person end-->
+				<!--New person-->
+				<div class="panel panel-default" ng-controller="myCtrl2">
+					<div class="panel-heading clearfix">
+						<h4 class="panel-title pull-left">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">{{fname +" "+ lname}}</a>
+						</h4>
+						<div class="pull-right">
+						<button href='#remove' class="btn btn-link btn-xs btn-remove-panel" onclick="removeThis(this)">x</button>
+						</div>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="col-lg-7 text-center nomination-list">
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">First name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" ng-model="fname" placehold="New">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Last name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" ng-model="lname"placehold="User">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Company:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Example Inc." value="">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Email:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="example@test.org">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Role:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="role" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="Superior">Superior</option>
+												  <option value="Colleague">Colleague</option>
+												  <option value="Subordinate">Subordinate</option>
+												  <option value="Customer">Customer</option>
+												  <option value="Other">Other</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+										<div class="row form-group">
+											<label class="col-xs-5 control-label">Language:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="language" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="English">English</option>
+												  <option value="Suomi">Suomi</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Person end-->
+								<!--New person-->
+				<div class="panel panel-default removing">
+					<div class="panel-heading clearfix">
+						<h4 class="panel-title pull-left">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Person #3</a>
+						</h4>
+						<div class="pull-right">
+						<button href='#remove' class="btn btn-link btn-xs btn-remove-panel" onclick="removeThis(this)">x</button>
+						</div>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="col-lg-7 text-center nomination-list">
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">First name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Jane">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Last name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Bishop">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Company:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Example Inc." value="">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Email:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="example@test.org">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Role:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="role" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="Superior">Superior</option>
+												  <option value="Colleague">Colleague</option>
+												  <option value="Subordinate">Subordinate</option>
+												  <option value="Customer">Customer</option>
+												  <option value="Other">Other</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+										<div class="row form-group">
+											<label class="col-xs-5 control-label">Language:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="language" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="English">English</option>
+												  <option value="Suomi">Suomi</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Person end-->
+				<!--New person-->
+				<div class="panel panel-default removing template">
+					<div class="panel-heading clearfix">
+						<h4 class="panel-title pull-left">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Person #4</a>
+						</h4>
+						<div class="pull-right">
+						<button href='#remove' class="btn btn-link btn-xs btn-remove-panel" onclick="removeThis(this)">x</button>
+						</div>
+					</div>
+					<div id="collapseFour" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="col-lg-7 text-center nomination-list">
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">First name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Jane">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Last name:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Bishop">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Company:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="Example Inc." value="">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Email:</label>
+											<div class="col-xs-4">
+											  <input class="form-control input-xs transparent-input" type="text" placeholder="example@test.org">
+											</div>
+									  </div>
+									  <div class="row form-group">
+											<label class="col-xs-5 control-label">Role:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="role" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="Superior">Superior</option>
+												  <option value="Colleague">Colleague</option>
+												  <option value="Subordinate">Subordinate</option>
+												  <option value="Customer">Customer</option>
+												  <option value="Other">Other</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+										<div class="row form-group">
+											<label class="col-xs-5 control-label">Language:</label>
+											<div class="col-xs-4">
+											  <div class="ui-select">
+												<select id="language" class="form-control input-xs">
+												<option value="" selected disabled>Please select</option>
+												  <option value="English">English</option>
+												  <option value="Suomi">Suomi</option>
+												</select>
+											  </div>
+											</div>
+									  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Person end-->
+		</div>
+		<!--Panel group end-->
+		<div class="col-xs-3 pull-left">
+			<button href='#add' class="btn btn-link btn-add-panel" id="addPanel">+ Add Person</button>
+		</div>
+		<div class="col-xs-3 pull-left">
+			<button class="btn btn-link" id="adding" onclick="addToList(this)">Save</button>
+		</div>
+	</div>
+<script>
+$(document).ready(function() {
+var $template = $(".template");
+
+var hash = 4;
+	$(".btn-add-panel").on("click", function () {
+		var $newPanel = $template.clone();
+		$newPanel.find(".collapse").removeClass("in");
+		$newPanel.find(".accordion-toggle").attr("href",  "#" + (++hash))
+				 .text("Person #" + hash);
+		$newPanel.find(".panel-collapse").attr("id", hash);
+		$("#accordion").append($newPanel.fadeIn());
+	});
+
+});
+</script>
+<script>
+	function removeThis(a) {
+		$(a).parent().parent().parent().remove();
+	}
+</script>
+
+
+<div class="row row-buttons">
+  <div class="col-xs-6 text-left"></div>
+  <div class="col-xs-6 text-right"><input type="submit" class="btn btn-primary" value="»&nbsp;Continue" name="ne"></div>
+</div><div class="row">
+  <div class="text-center">
+    <p><small>© 2015 <a href="http://www.itim.org" target="_blank">Itim International</a></small></p>
+  </div>
+</div></form></div></div></body></html>

@@ -1,0 +1,297 @@
+/*.row-5-gutter{
+    margin-left: -20px !important;
+}
+
+/* For 5 checkboxes */
+.row-label {
+  margin-left: -30px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+
+
+h1.logo {
+ font-size: 20px;
+ color: #96bbd0;
+ font-weight: bold;
+}
+
+@media ( min-width : 768px) {
+ .text-right-sm {
+  text-align: right;
+ }
+     .text-left-sm {
+      text-align: left;
+    }
+ .text-center-sm {
+  text-align: center;
+ }
+ /* For 5 checkboxes */
+ .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+	.row-sm-num {
+		padding: 8px;
+	}
+
+}
+@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 100%;
+  }
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+}
+
+@media ( max-width : 768px) {
+  .question-options label {
+  display: block;
+  border: 2px solid #BDC3C7;
+  border-radius: 4px;
+  padding: 12px 12px 12px 40px;
+  margin: 0 0 3px 0;
+  line-height: 20px;
+  color: #333;
+  text-align: left;
+  vertical-align: middle;
+  width: 100%;
+  } 
+	p,.btn,input,div,span,h4 {
+    font-size: 100%;
+	}
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+.rotate-xs {
+  -webkit-transform: rotate(-35deg) !important;
+  -ms-transform: rotate(-35deg) !important;
+  -o-transform: rotate(-35deg) !important;
+  transform: rotate(-35deg) !important;
+
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-left-sm {
+      text-align: left;
+    }
+    .text-right-sm {
+      text-align: right;
+    }
+    .text-center-sm {
+      text-align: center;
+    }
+		
+	/* For 5 checkboxes */
+	.radiopad {
+	  padding-left: 5px;
+	  padding-right: 25px;
+	}
+	/* For 5 checkboxes */
+	.notanswer {
+	  padding-left: 25px;
+	  padding-top: 10px;
+	}
+	/* For 5 checkboxes */
+	.col-xs-15,
+	.col-sm-15,
+	.col-md-15,
+	.col-lg-15 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 10px;
+	}
+	  .rotate-sm {
+    -webkit-transform: rotate(-90deg) !important;
+    -ms-transform: rotate(-90deg) !important;
+    -o-transform: rotate(-90deg) !important;
+    transform: rotate(-90deg) !important;
+	margin-top: 50px !important;
+	margin-bottom: 0px !important;
+  }
+  
+		.no-rotate-sm {
+		-webkit-transform: rotate(0deg) !important;
+		-ms-transform: rotate(0deg) !important;
+		-o-transform: rotate(0deg) !important;
+		transform: rotate(0deg) !important;
+		}
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .text-left-md {
+      text-align: left;
+    }
+    .text-right-md {
+      text-align: right;
+    }
+    .text-center-md {
+      text-align: center;
+    }
+	/* For 5 checkboxes */
+	.col-md-15 {
+        width: 20%;
+        float: left;
+    }
+	/* For 5 checkboxes */
+	.radiopad {
+		padding-left: 5px;
+		padding-right: 25px;
+	}
+	/* For 5 checkboxes */
+	.notanswer {
+	  padding-left: 25px;
+	}
+		/* For 5 checkboxes */
+	.col-xs-15,
+	.col-sm-15,
+	.col-md-15,
+	.col-lg-15 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+    .text-left-lg {
+      text-align: left;
+    }
+    .text-right-lg {
+      text-align: right;
+    }
+    .text-center-lg {
+      text-align: center;
+    }
+	/* For 5 checkboxes */
+	.col-lg-15 {
+       width: 20%;
+       float: left;
+    }
+	/* For 5 checkboxes */
+	.radiopad {
+	  padding-left: 5px;
+	  padding-right: 25px;
+	}
+	/* For 5 checkboxes */
+	.notanswer {
+	  padding-left: 25px;
+	}
+		/* For 5 checkboxes */
+	.col-xs-15,
+	.col-sm-15,
+	.col-md-15,
+	.col-lg-15 {
+      position: relative;
+      min-height: 1px;
+      padding-right: 10px;
+	}
+}
+
+
+
+
+.bordered {
+ border-bottom: 1px solid #979696;
+}
+
+hr {
+ border: 3px solid #96bbd0;
+}
+
+
+.form-group.required .control-label:after {
+ content: "* ";
+ color: #ff0000;
+}
+
+label {
+ font-weight: normal;
+ cursor: pointer;
+}
+
+
+input[type="text"], textarea {
+box-shadow:none !important;
+} 
+
+.form-control:focus {
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+
+/ custom checkboxes /
+
+
+input[type=checkbox] + span, input[type=radio] + span,{
+ cursor:pointer;
+}
+
+input[type=checkbox] , input[type=radio]{ 
+  opacity:0;
+  margin-left: -10px;
+ }
+ 
+ input[type=checkbox] + span:before, input[type=radio] + span:before{ 
+  font-family: FontAwesome; 
+  margin-right: 8px;
+  margin-left: -14px;
+ }
+ 
+input[type=checkbox] + span:before{
+ content: "\f096"; / unchecked radio icon /
+ } 
+
+input[type=checkbox]:checked + span:before { 
+ content: "\f046"; / checked icon / 
+ margin-right: 5px;
+ } 
+
+ 
+ input[type=radio] + span:before{
+ content: "\f10c"; / unselected radio icon /
+ }
+ 
+ input[type=radio]:checked + span:before {
+ content: "\f192"; / selected radio icon / 
+ margin-right: 8px;
+ } 
+
+input[type="checkbox"]:focus + span:before, input[type="radio"]:focus + span:before{
+  color: #f4a616;
+  / color: #66afe9; /
+}
+
+.row-buttons {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+	.question-group-sm {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}

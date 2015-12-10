@@ -1,0 +1,244 @@
+/* For 5 checkboxes */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+/* For 5 checkboxes */
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+/* For 5 checkboxes */
+.notanswer {
+	padding-left: 25px;
+}
+
+
+h1.logo {
+ font-size: 20px;
+ color: #96bbd0;
+ font-weight: bold;
+}
+
+
+span {
+font-size: 14px;
+}
+@media ( min-width : 768px) {
+ .text-right-sm {
+  text-align: right;
+ }
+ .text-center-sm {
+  text-align: center;
+ }
+ /* For 5 checkboxes */
+ .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+
+}
+@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+}
+
+@media ( max-width : 768px) {
+  .question-options label {
+  display: block;
+  border: 2px solid #BDC3C7;
+  border-radius: 4px;
+  padding: 12px 12px 12px 40px;
+  margin: 0 0 3px 0;
+  line-height: 20px;
+  color: #333;
+  text-align: left;
+  vertical-align: middle;
+  width: 100%;
+  } 
+	p,.btn,input,div,span,h4 {
+    font-size: 98%;
+	}
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-left-sm {
+      text-align: left;
+    }
+    .text-right-sm {
+      text-align: right;
+    }
+    .text-center-sm {
+      text-align: center;
+    }
+	
+	p,.btn,input,div,span,h4,h1,h2,h3 {
+    font-size: 96%;
+	}
+	
+	/* For 5 checkboxes */
+	.radiopad {
+	padding-left: 5px;
+	padding-right: 25px;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .text-left-md {
+      text-align: left;
+    }
+    .text-right-md {
+      text-align: right;
+    }
+    .text-center-md {
+      text-align: center;
+    }
+	/* For 5 checkboxes */
+	.col-md-15 {
+        width: 20%;
+        float: left;
+    }
+/* For 5 checkboxes */
+.radiopad {
+	padding-left: 5px;
+	padding-right: 25px;
+}
+}
+
+@media (min-width: 1200px) {
+    .text-left-lg {
+      text-align: left;
+    }
+    .text-right-lg {
+      text-align: right;
+    }
+    .text-center-lg {
+      text-align: center;
+    }
+	/* For 5 checkboxes */
+	.col-lg-15 {
+       width: 20%;
+       float: left;
+    }
+	/* For 5 checkboxes */
+.radiopad {
+	padding-left: 5px;
+	padding-right: 25px;
+	
+}
+}
+
+}
+@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  h1 {
+    font-size: 24px;  
+  }
+  h2 {
+    font-size: 22px;  
+  }
+  h3 {
+    font-size: 18px;  
+  }
+  
+}
+
+
+.bordered {
+ border-bottom: 1px solid #979696;
+}
+
+hr {
+ border: 3px solid #96bbd0;
+}
+
+
+.form-group.required .control-label:after {
+ content: "* ";
+ color: #ff0000;
+}
+
+label {
+ font-weight: normal;
+}
+
+
+input[type="text"], textarea {
+box-shadow:none !important;
+} 
+
+.form-control:focus {
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+
+/ custom checkboxes /
+
+input[type=checkbox] + span, input[type=radio] + span,{
+ cursor:pointer;
+}
+input[type=checkbox] , input[type=radio]{ 
+  opacity:0;
+  margin-left: -5px;
+ }
+ 
+ input[type=checkbox] + span:before, input[type=radio] + span:before{ 
+  font-family: FontAwesome; 
+  margin-right: 8px;
+  font-size: 24px;
+  color: #9caa00;
+  margin-left: -14px;
+ }
+ 
+input[type=checkbox] + span:before{
+ content: "\f096"; / unchecked radio icon /
+ } 
+
+input[type=checkbox]:checked + span:before { 
+ content: "\f046"; / checked icon / 
+ margin-right: 5px;
+ } 
+
+ 
+ input[type=radio] + span:before{
+ content: "\f10c"; / unselected radio icon /
+ }
+ 
+ input[type=radio]:checked + span:before {
+ content: "\f192"; / selected radio icon / 
+ margin-right: 8px;
+ } 
+
+input[type="checkbox"]:focus + span:before, input[type="radio"]:focus + span:before{
+  color: #f4a616;
+  / color: #66afe9; /
+}
